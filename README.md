@@ -1,42 +1,27 @@
-# daily_reminder
-每日微信公众号消息推送
-
-
-源码下载：https://wqq2019.lanzouj.com/iGzMz0a62ixa
-
-GitHub:
-https://github.com/
-
-微信开放平台测试号:
-https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
-
-和风天气:
-https://console.qweather.com/#/apps?lang=zh
-
-
-
-模板内容如下：
-
-{{date.DATA}} 
-
-地区：{{region.DATA}} 
-
-天气：{{weather.DATA}} 
-
-气温：{{temp.DATA}} 
-
-风向：{{wind_dir.DATA}} 
-
-今天是我们恋爱的第{{love_day.DATA}}天 
-
-{{birthday1.DATA}} 
-{{birthday2.DATA}}
-
-
-{{note_en.DATA}} 
-{{note_ch.DATA}}
-
-
-
-
-
+{
+# 公众号配置
+# 公众号appId
+"app_id": "wx2b785b90f62797b8",
+# 公众号appSecret
+"app_secret": "ca55db03424f3d379a70f6fbb907ff79",
+# 模板消息id
+"template_id": "早安",
+# 接收公众号消息的微信号，如果有多个，需要在[]里用英文逗号间隔，例如["wx1", "wx2"]
+"user": ["wx1"],
+ 
+# 信息配置
+# 和风天气apikey
+"weather_key": "fa31a1fd4353445ebf6792f32af07950",
+# 所在地区，可为省，城市，区，县，同时支持国外城市，例如伦敦
+"region": "昆明",
+# 生日1，修改名字为对应需要显示的名字，如果生日为农历，在最前面加上r即可
+"birthday1": {"name": "叔叔", "birthday": "1994-04-27"},
+# 生日2
+"birthday2": {"name": "宝贝", "birthday": "1998-04-11"},
+# 在一起的日子，格式同上，暂不不支持农历
+"love_date": "2022-08-17",
+# 金句中文，如果设置了，则会显示这里的，如果为空，默认会读取金山的每日金句
+"note_ch": "",
+# 金句英文
+"note_en": ""
+}
